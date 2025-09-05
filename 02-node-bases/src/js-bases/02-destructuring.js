@@ -1,0 +1,1 @@
+export const { SHELL, NVM_DIR } = process.env;

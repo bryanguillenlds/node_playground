@@ -1,6 +1,6 @@
 let emailTemplate = `
   <h1>Hello {{name}}</h1>
-  <p>Welcome to our website</p>
+  <p>Welcome to our websites</p>
 `;
 
 const emailData = {
