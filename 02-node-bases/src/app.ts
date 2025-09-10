@@ -1,10 +1,10 @@
 // const { emailTemplate } = require("./js-bases/01-template");
-// import { emailTemplate } from "./js-bases/01-template.js";
-// import { SHELL, NVM_DIR } from "./js-bases/02-destructuring.js";
-// import { getUserByName } from "./js-bases/03-callbacks.js";
-// import { getId, getAge } from "./plugins/index.plugin.js";
-// import { buildMakePerson } from "./js-bases/05-factory-functions.js";
-// import { getPokemonById } from "./js-bases/06-promises.js";
+import { emailTemplate } from "./js-bases/01-template";
+import { SHELL, NVM_DIR } from "./js-bases/02-destructuring";
+import { getUserByName } from "./js-bases/03-callbacks";
+import { getId } from "./plugins/index.plugin";
+import { buildMakePerson } from "./js-bases/05-factory-functions";
+import { getPokemonById } from "./js-bases/06-promises";
 import { buildLogger } from "./plugins/index.plugin";
 // console.log(emailTemplate);
 // console.log(SHELL, NVM_DIR);
