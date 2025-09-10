@@ -7,10 +7,10 @@
   - Add error handling or data transformation to external APIs
   - Can easily swap 3rd party libraries with different interfaces and make the change just in the adapter
 */
-import getAgePlugin from 'get-age';
+// import getAgePlugin from "get-age";
 
-const getAge = (birthdate) => {
-  return getAgePlugin(birthdate);
-};
+// const getAge = (birthdate: string) => {
+//   return getAgePlugin(birthdate);
+// };
 
-export { getAge };
+// export { getAge };
