@@ -1,11 +1,11 @@
 // const { emailTemplate } = require("./js-bases/01-template");
-import { emailTemplate } from "./js-bases/01-template";
-import { SHELL, NVM_DIR } from "./js-bases/02-destructuring";
-import { getUserByName } from "./js-bases/03-callbacks";
-import { getId } from "./plugins/index.plugin";
-import { buildMakePerson } from "./js-bases/05-factory-functions";
-import { getPokemonById } from "./js-bases/06-promises";
-import { buildLogger } from "./plugins/index.plugin";
+// import { emailTemplate } from "./js-bases/01-template";
+// import { SHELL, NVM_DIR } from "./js-bases/02-destructuring";
+// import { getUserByName } from "./js-bases/03-callbacks";
+// import { getId } from "./plugins/index.plugin";
+// import { buildMakePerson } from "./js-bases/05-factory-functions";
+// import { getPokemonById } from "./js-bases/06-promises";
+// import { buildLogger } from "./plugins/index.plugin";
 // console.log(emailTemplate);
 // console.log(SHELL, NVM_DIR);
 // getUserByName("John",  (error, user) => {
@@ -51,6 +51,6 @@ import { buildLogger } from "./plugins/index.plugin";
 // const pokemon = await getPokemonById(1)
 // console.log(pokemon);
 
-const logger = buildLogger("app");
-logger.log("Hello, world!");
-logger.error("Error, world!");
+// const logger = buildLogger("app");
+// logger.log("Hello, world!");
+// logger.error("Error, world!");
