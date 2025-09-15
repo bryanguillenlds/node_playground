@@ -48,4 +48,4 @@ const buildLogger = (service: string) => {
   };
 };
 
-export { buildLogger };
+export { buildLogger, loggerPlugin };
