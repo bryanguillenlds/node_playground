@@ -7,11 +7,13 @@ import yargsPlugin from "./plugins/args.plugin";
 
 async function main() {
   // console.log({ yargsPlugin });
-  const { multiply, limit, show } = yargsPlugin;
+  const { multiply, limit, show, name, destination } = yargsPlugin;
 
   ServerApp.run({
     multiply,
     limit,
     show,
+    name,
+    destination,
   });
 }

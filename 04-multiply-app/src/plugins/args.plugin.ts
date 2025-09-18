@@ -23,12 +23,27 @@ const yargsPlugin = yargs(hideBin(process.argv))
     describe: "Show the table in the console",
     default: false,
   })
+  .option("n", {
+    alias: "name",
+    type: "string",
+    demandOption: false,
+    describe: "The name of the file",
+  })
+  .option("d", {
+    alias: "destination",
+    type: "string",
+    demandOption: false,
+    describe: "The destination of the file",
+  })
   .check((argv: any) => {
     if (argv.multiply < 1) {
       throw new Error("The number to multiply must be greater than 0");
     }
     if (argv.limit < 1 || argv.limit > 16) {
       throw new Error("The limit must be between 1 and 16");
+    }
+    if (!argv.name.includes(".txt")) {
+      throw new Error("The name of the file must end with .txt");
     }
     return true;
   })
@@ -39,4 +54,6 @@ export default {
   multiply: yargsPlugin.multiply,
   limit: yargsPlugin.limit,
   show: yargsPlugin.show,
+  name: yargsPlugin.name,
+  destination: yargsPlugin.destination,
 };
