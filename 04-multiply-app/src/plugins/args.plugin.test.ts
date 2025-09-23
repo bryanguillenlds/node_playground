@@ -8,8 +8,10 @@ const runCommand = async (args: string[]) => {
 
 describe("ArgsPlugin", () => {
   beforeEach(() => {
-    // Reset process.argv before each test
-    process.argv = process.argv.slice(0, 2); // Keep only node and script path
+    // Reset the modules because it was cached from the previous test when runcommand executed
+    jest.resetModules();
+    // Reset process.argv before each test, otherwise it will keep the previous test arguments
+    process.argv = process.argv.slice(0, 2);
   });
 
   test("should return the correct arguments", async () => {
@@ -32,6 +34,27 @@ describe("ArgsPlugin", () => {
       show: true,
       name: "table.txt",
       destination: "outputs",
+    });
+  });
+
+  test("should return config with custom options", async () => {
+    const argv = await runCommand([
+      "-m",
+      "3",
+      "-l",
+      "15",
+      "-n",
+      "table-custom.txt",
+      "-d",
+      "outputs-custom",
+    ]);
+
+    expect(argv).toEqual({
+      multiply: 3,
+      limit: 15,
+      show: false,
+      name: "table-custom.txt",
+      destination: "outputs-custom",
     });
   });
 });
